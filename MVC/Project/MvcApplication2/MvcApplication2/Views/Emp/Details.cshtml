@@ -1,0 +1,36 @@
+﻿@model MvcApplication2.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.EmpId }) |
+    @Html.ActionLink("Back to List", "EmployeeDetail")
+</p>
